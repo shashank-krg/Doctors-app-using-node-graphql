@@ -1,0 +1,39 @@
+{
+  "name": "doctors-appointment",
+  "version": "1.0.0",
+  "description": "Doctor's appointments",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx nodemon --exec npx babel-node index.js",
+    "heroku-postbuild": "cd client && npm install && npm install && npm run build",
+    "server": "npx nodemon --exec npx babel-node index.js",
+    "client": "npm start --prefix react-ui",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "author": "Shashank kumar",
+  "license": "ISC",
+  "dependencies": {
+    "@ant-design/icons": "^4.6.2",
+    "concurrently": "^6.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "env": "^0.0.2",
+    "express": "^4.16.4",
+    "express-graphql": "^0.7.1",
+    "graphql": "^14.0.2",
+    "mongoose": "^5.3.9"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/node": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "nodemon": "^2.0.2"
+  },
+  "engines": {
+    "node": "12.13.1"
+  }
+}
